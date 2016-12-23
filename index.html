@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>TITLE</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <ul class="menu">
+        <li>
+            <a href ui-sref="view1" ui-sref-active="active">view1</a>
+        </li>
+
+        <li>
+            <a href ui-sref="view2" ui-sref-active="active">view2</a>
+        </li>
+    </ul>
+
+</div>
+
+<div class="container">
+    <ui-view></ui-view>
+</div>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="bower_components/underscore/underscore-min.js"></script>
+
+
+<script>
+    var appControllers = angular.module("myApp.controllers", []);
+    var appServices = angular.module("myApp.services", []);
+</script>
+
+
+<script src="controllers/view1.js"></script>
+<script src="controllers/view2.js"></script>
+
+
+<script src="routes.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
