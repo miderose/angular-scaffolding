@@ -3,6 +3,28 @@ var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var reload = browserSync.reload;
 
+var mainBowerFiles = require('main-bower-files');
+var concat = require('gulp-concat');
+var minify = require('gulp-minify');
+var cleanCSS = require('gulp-clean-css');
+var del = require('del');
+
+gulp.task('collect-bower-js', function () {
+    return gulp.src(mainBowerFiles("**/*.js"))
+        .pipe(concat('vendor.js'))
+        .pipe(minify())
+        .pipe(gulp.dest("./libs/js"))
+        .on('end', function () {
+            del('./libs/js/vendor.js');
+        })
+});
+
+gulp.task('collect-bower-css', function () {
+    return gulp.src(mainBowerFiles("**/*.css"))
+        .pipe(concat('vendor.min.css'))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest("./libs/css"))
+});
 
 gulp.task('sass', function () {
     return gulp.src('./sass/**/*.scss')
@@ -41,3 +63,5 @@ gulp.task('serve', function () {
             .pipe(browserSync.stream());
     });
 });
+
+gulp.task("default", ["collect-bower-js", "collect-bower-css", "serve"]);
