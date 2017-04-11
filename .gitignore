@@ -1,1 +1,4 @@
 css/style.css
+.idea/
+node_modules/
+bower_components/

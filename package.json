@@ -1,7 +1,7 @@
 {
-  "name": "traceability",
-  "version": "1.0.0",
-  "description": "",
+  "name": "starter",
+  "version": "0.0.1",
+  "description": "Simple scaffolding with angular & ui-router, bootstrap and some js lib as npm and bower dependencies",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,13 @@
     "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miderose/angular-scaffolding.git"
+  },
+  "bugs": {
+    "url": "https://github.com/miderose/angular-scaffolding/issues"
+  },
+  "homepage": "https://github.com/miderose/angular-scaffolding#readme"
 }

@@ -1,0 +1,87 @@
+<div id="language-choose" class="pull-right">
+    <a href=""
+       ng-if="usedLanguage != 'it'"
+       ng-click="changeLanguage('it-IT')"
+       ng-class="{'strong': usedLanguage=='it'}"
+       class="navbar-link">ITA</a>
+    <strong ng-if="usedLanguage =='it'">ITA</strong>
+    |
+    <a href=""
+       ng-if="usedLanguage != 'en'"
+       ng-click="changeLanguage('en-EN')"
+       ng-class="{'strong': usedLanguage=='en'}"
+       class="navbar-link">ENG</a>
+    <strong ng-if="usedLanguage =='en'">ENG</strong>
+</div>
+
+<div class="clearfix"></div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <form class="form-signin" ng-submit="login()">
+            <!--
+                            <h2 class="form-signin-heading">Please sign in</h2>
+            -->
+
+            <div class="form-group">
+                <label for="inputEmail"><span translate="LOGIN.USERNAME_LABEL"></span>:</label>
+                <input type="text"
+                       id="inputEmail"
+                       ng-model="formData.email"
+                       class="form-control"
+                       placeholder="Email address"
+                       required
+                       autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword"><span translate="LOGIN.PASSWORD_LABEL"></span>:</label>
+                <input type="password"
+                       id="inputPassword"
+                       ng-model="formData.password"
+                       class="form-control"
+                       placeholder="Password"
+                       required>
+            </div>
+
+            <!--
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"
+                                               value="remember-me"> Remember me
+                                    </label>
+                                </div>
+            -->
+
+            <button class="btn btn-lg btn-primary btn-block"
+                    type="submit"><span translate="LOGIN.SIGN_IN_LABEL"></span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="row" ng-if="errorMsg">
+    <div class="col-sm-6 col-sm-offset-3">
+        <br>
+        <div class="alert alert-danger">
+            <h4 class="text-center">
+                <span translate="LOGIN.AUTH_ERROR_MESSAGE"></span>
+            </h4>
+        </div>
+    </div>
+</div>
+
+
+
+
+<ul class="menu">
+    <li>
+        <a href ui-sref="app.view1" ui-sref-active="active">view1</a>
+    </li>
+
+    <li>
+        <a href ui-sref="app.view2" ui-sref-active="active">view2</a>
+    </li>
+</ul>
