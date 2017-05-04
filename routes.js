@@ -11,9 +11,9 @@ angular.module('myApp.routes', [])
         $stateProvider.state({
             name: 'app',
             url: '/app',
-            abstract: true
+            abstract: true,
+            templateUrl: 'templates/app.html'
             //controller: "View1Ctrl",
-            //templateUrl: 'templates/view1.html'
         });
 
         $stateProvider.state({

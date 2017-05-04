@@ -26,6 +26,7 @@
     "gulp-clean-css": "^3.0.4",
     "gulp-concat": "^2.6.1",
     "gulp-minify": "0.0.15",
+    "gulp-zip": "^4.0.0",
     "main-bower-files": "^2.13.1"
   }
 }
