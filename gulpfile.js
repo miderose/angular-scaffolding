@@ -117,7 +117,7 @@ ZIP_NAME += "" + (d.getDate());
 ZIP_NAME += "_";
 
 ZIP_NAME += "" + (d.getHours());
-ZIP_NAME += "" + (d.getMinutes());
+ZIP_NAME += "" + (d.getMinutes() < 10 ? "0" + d.getMinutes() : d.getMinutes());
 ZIP_NAME += "" + (d.getSeconds());
 
 ZIP_NAME += ".zip";
